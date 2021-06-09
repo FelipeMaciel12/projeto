@@ -23,8 +23,6 @@ public class ItmnAlarmeController {
     //Buscar todos os alarmes    
     @GetMapping ("/todos")
     public List<ItmnAlarme> listarTodos(){
-        List<ItmnAlarme> lista = (List<ItmnAlarme>) repo.findAll();
-        return lista;
-    }
-   
+        return (List<ItmnAlarme>) repo.findAll();
+    }   
 }
