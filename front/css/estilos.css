@@ -1,0 +1,116 @@
+   /* "CSS" Criando um padrao de estilos para os comandos nativos do HTML*/
+
+   P{
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(8, 8, 8);
+} 
+
+h1{
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    color: black;
+}
+
+body{
+    
+    background-color: white;
+
+}
+
+form{
+    background-color: white;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+fieldset{
+    width: 250px;
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+}
+
+legend{
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    text-align: center;
+
+  
+}
+
+/* criando um padrao de estilos para ser aplicado na pagina*/
+.contexto{
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+}
+
+.menu{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
+
+
+.campo_nome{
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 240px;
+    color: darkred;
+    background-color: antiquewhite;
+}
+
+.campo_email{
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 290px;
+    color: darkred;
+    background-color: antiquewhite;
+}
+
+.campo_senha{
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 250px;
+    color: darkred;
+    background-color: antiquewhite;
+}
+
+/*Criando estilos para a nossa pagina bootstrap*/
+
+.container{
+    border: 3px solid black;
+}
+
+.div1{
+    background-color: rgb(5, 5, 95);
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: right;
+    width: 50px;
+}
+
+
+.div2{
+    background-color: green;
+}
+
+.div3{
+    background-color: blue;
+}
+
+
+.div4{
+    background-color: red;
+}
+
+.cabecalho{
+    background-color: gray;
+}

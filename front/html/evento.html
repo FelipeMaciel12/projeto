@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EventDash - Login</title>
+    <title>Relatório de Eventos</title>
 
     <!--chamando os componentes do bootstrap-->
 
@@ -26,17 +26,15 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
 
-    <script src="/js/login.js"></script>
-
     <!--Chamando a nossa biblioteca estilos.css-->
     <link rel="stylesheet" href="../css/estilos.css">
 
-
+    <script src="/js/interna.js"> </script>
 
 </head>
 
-<body>
- 
+<body onload="validaLogin()">
+
     <!-- Inserindo um menu do tipo navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#"><img src="../imagens/logo_itau.png" width="60" height="40"> </a>
@@ -48,27 +46,43 @@
         <!--criando uma linha dentro do container-->
         <div class="row">
             <!--inserindo coluna dentro da linha no container-->
-            <div class="col-lg-2 col-md-2 col-sm-2 div1"></td></div>
+            <div class="col-lg-2 col-md-2 col-sm-2 div1"></div>
             <div class="col-lg-8 col-md-8 col-sm-8">
-                    <!--Inserindo uma caixa para os campos do formulario-->
-                    <fieldset>
-                        <!--Inserindo uma legenda na pagina-->
-                        <legend>ItauMon</legend>
-                        <label>User Name:</label><br><input type="text" id="txtUser" required> <br><br>
-                        <label>Password:</label><br><input type="password" id="txtPassword" required><br><br>
-                        <!--inserindo um botao na nossa pagina-->
-                        <button onclick="login()">SIGN IN</button><br><br>
-                        <div id="msgError"></div>
-                    </fieldset>
+
+                <table border="0" width=100% class="menu">
+
+                    <!--inserindo uma linha na tabela com a tag <tr>-->
+                    <tr>
+                        <!--inserindo colunas dentra da linha da tabela <td>-->
+                        <td align="left"> <img src="../imagens/felipe.jpg" width="80" height="80">
+                            <div id="dadosUser"></div>
+                        </td>
+                        <td align="right"><button onclick="paginaRel()"> Voltar </button></td>
+                        <td align="right"><button onclick="logout()"> Logout </button></td>
+                    </tr>
+
+                </table>
+                <br><br>
+                <fieldset>
+                    <!--Inserindo uma legenda na pagina-->
+
+                    <legend>Relatório de Eventos<br>Insira o período desejado</legend>
+                    <!--Criando um campo data-->
+                    <label>Data Início</label>
+                    <input type="date" name="data_inicio" required>
+                    <label>Data Fim</label>
+                    <input type="date" name="data_inicio" required><br><br>
+                    <button onclick=> Gerar Relatório </button></td>
+                    
+                    <!-- <div id="tabela"></div>-->
+                    <div id="alarme"></div>                  
+                    <br><br>
+                    </td>
+                </fieldset>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-2 div1"></div>
-
         </div>
-
     </div>
-
 </body>
-
-</html>
 
 </html>
