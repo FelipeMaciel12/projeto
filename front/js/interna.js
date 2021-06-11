@@ -9,21 +9,22 @@ function validaLogin(id) {
     let user = JSON.parse(userTxt)
 
     document.getElementById("dadosUser").innerHTML = `<b>${user.nome} (${user.racf})</b>`
-
+    document.getElementById("imgUser").innerHTML = `<img src="${user.linkFoto}">`
     //listarUser()
 
-    if (id==1) {
+    if (id == 1) {
         listaAlarme()
     }
+
+    if (id == 2) {
+        listaEvento()
+    }
 }
+
 
 function logout() {
     localStorage.removeItem("userLogged")
     window.location = "index.html"
-}
-
-function paginaRel() {
-    window.location = "interna.html"
 }
 
 
@@ -39,6 +40,10 @@ function relEvento(event) {
     window.location = "evento.html"
 
 
+}
+
+function paginaRel() {
+    window.location = "interna.html"
 }
 
 function listaAlarme() {
@@ -66,7 +71,6 @@ function exibirAlarme(lista) {
 }
 
 function listaEvento() {
-    
     let dataInicio = document.getElementById("dataInicio").value;
     let dataFim = document.getElementById("dataFim").value;
 
@@ -86,7 +90,7 @@ function listaEvento() {
     fetch("http://localhost:8080/evento/data", msg)
         .then(res => res.json())
         .then(res => preencheEventos(res));
-            
+
 }
 
 
@@ -106,5 +110,6 @@ function preencheEventos(res) {
 
     tabelaEventos += '</table>';
     document.getElementById("tabelaEV").innerHTML = tabelaEventos;
+
 
 }

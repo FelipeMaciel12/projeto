@@ -30,10 +30,11 @@ form{
 
 
 fieldset{
-    width: 250px;
+    width: 550px;
     font-size: 12px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
+    
 }
 
 legend{
@@ -118,6 +119,7 @@ legend{
 .jumbotron{
     background-color:white;
     margin-bottom: 0px;
+    min-width: 200px;
     
 }
 
@@ -191,4 +193,5 @@ img{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     width: 240px;
     color: #FF9900;
+    margin-bottom: 15px;
 }

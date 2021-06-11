@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EventDash - Relatórios</title>
+    <title>Relatório de Eventos</title>
 
     <!--chamando os componentes do bootstrap-->
 
@@ -26,47 +26,44 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
 
-    <script src="/js/interna.js"> </script>
-
     <!--Chamando a nossa biblioteca estilos.css-->
     <link rel="stylesheet" href="../css/estilos.css">
 
+    <script src="/js/interna.js"> </script>
+
 </head>
 
-<!-- Inserindo um menu do tipo navbar
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img src="../imagens/logo_itau.png" width="60" height="40"> </a>
-    <a class="navbar-brand" href="#">EventDash </a>
-</nav>-->
+<body onload="validaLogin(2)">
 
-<body onload="validaLogin()">
     <div id="background">
-        <!--Criando o container lg da nossa caixa-->
         <div class="container d-flex h-100">
             <!--criando uma linha dentro do container-->
             <div class="row align-items-center w-100">
                 <!--inserindo coluna dentro da linha no container-->
                 <div class="col-7 mx-auto">
                     <div class="jumbotron">
-                        <!-- <table border="0" width=100% class="menu">
+                        <!--  <table border="0" width=100% class="menu">
+
                             inserindo uma linha na tabela com a tag <tr>
                             <tr>
                                 inserindo colunas dentra da linha da tabela <td>
-                                <td align="center"> <img src="../imagens/felipe.jpg" width="80" height="80">
+                                <td align="left"> <img src="../imagens/felipe.jpg" width="80" height="80">
                                     <div id="dadosUser"></div>
                                 </td>
+                                <td align="right"><button onclick="paginaRel()"> Voltar </button></td>
+                                <td align="right"><button onclick="logout()"> Logout </button></td>
                             </tr>
 
                         </table> -->
                         <div class="row w-100" id="cabecalho">
-                            <div class="col align-self-center" id="imgUser"> 
+                            <div class="col align-self-center" id="imgUser"> <img src="../imagens/felipe.jpg">
                             </div>
                             <div class="col align-self-center" id="dadosUser"></div>
                             <div class="col-4 align-self-center">
                                 <div class="row ">
                                     <div class="col">
-                                        <!--<button class="btn btn-sm btn-secondary" onclick="paginaRel()"><i
-                                                class="fa fa-sign-out"></i> Voltar</button>-->
+                                        <button class="btn btn-sm btn-secondary" onclick="paginaRel()"><i
+                                                class="fa fa-sign-out"></i> Voltar</button>
                                     </div>
                                     <div class="col">
                                         <button class="btn btn-sm btn-secondary" onclick="logout()"><i
@@ -77,33 +74,20 @@
                             </div>
                         </div>
                         <div class="row w-100" style="height: 20px; margin-top: 20px"></div>
+                        
                         <div class="row align-items-center">
-                            <div class="col-6 mx-auto">
-                                <form>
-                                    <!--Inserindo uma legenda na pagina-->
-                                    <div class="col text-center">
-                                        <legend class="tituloRel">Tipos de Relatório</legend>
-                                        <button class="btn btn-sm btn-primary" onclick="relAlarme(event)"> Alarmes
-                                            Cadastrados
-                                        </button><br><br>
-                                        <button class="btn btn-sm btn-primary" onclick="relEvento(event)"> Eventos por
-                                            Período
-                                        </button>
-                                    </div>
-                                    <!--<div class="col text-center">
-                                        <br><br>
-                                        <button class="btn btn-outline-primary" onclick="logout()">Logout</button>
-                                    </div>-->
-                                </form>
-
+                            <div class="col text-center">
+                                <!--Inserindo uma legenda na pagina-->
+                                <legend class="tituloRel2">Relatório de Eventos</legend>
+                                <div id="tabelaEV"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
+
 </body>
 
 </html>

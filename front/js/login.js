@@ -3,7 +3,7 @@ function login(event) {
     event.preventDefault()
     let user = document.getElementById("txtUser").value
     let password = document.getElementById("txtPassword").value
-
+    
     let url = `http://localhost:8080/user/login`
 
     let msg = {

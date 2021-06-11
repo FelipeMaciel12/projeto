@@ -82,23 +82,42 @@
                         <div class="row w-100" style="height: 20px; margin-top: 20px"></div>
 
                         <div class="row align-items-center">
-                            <div class="col-6 mx-auto">
+                            <div class="col-12 mx-auto">
                                 <fieldset>
-                                    <div class="col text-center">
-                                        <!--Inserindo uma legenda na pagina-->
-                                        <legend class="tituloRel2">Relatório de Eventos<br>Insira o Período Desejado
-                                        </legend>
-                                        <!--Criando um campo data-->
-                                        <label class="campoData"><b>Data Início</b></label> <input type="date" id="dataInicio" required><br><br>
-                                        <label class="campoData"><b>Data Fim</b></label><input type="date" id="dataFim" required><br><br>
-                                        <button class="btn btn-outline-primary" onclick="listaEvento()"> Gerar Relatório
-                                        </button></td><br><br>
+                                    <div class="row align-items-center">
+                                        <div class="col text-center">
+                                            <!--Inserindo uma legenda na pagina-->
+                                            <legend class="tituloRel2">Relatório de Eventos<br>Insira o Período
+                                                Desejado
+                                            </legend>
+                                        </div>
                                     </div>
-                                   
+                                    <!--Criando um campo data-->
+                                    <div class="row align-items-center">
+                                        <div class="col">
+                                            <div class="row align-items-center">
+                                                <div class="col text-center">
+                                                    <label class="campoData"><b>Data Início</b></label> <input
+                                                        type="date" id="dataInicio" required>
+                                                </div>
+                                                <div class="col text-center">
+                                                    <label class="campoData"><b>Data Fim</b></label><input type="date"
+                                                        id="dataFim" required>
+                                                </div>
+                                                <div class="col text-center">
+                                                    <br>
+                                                    <button class="btn btn-outline-primary" onclick="listaEvento()">
+                                                        Gerar
+                                                        Relatório
+                                                    </button><br>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </fieldset>
 
                             </div>
-                            <div id="tabelaEV"></div>
+                            <div id="tabelaEV" style="overflow-y:scroll; max-height: 210px; margin-top: 15px;"></div>
                         </div>
                     </div>
 
