@@ -1,6 +1,10 @@
 package br.itau.dashboard.controller;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -33,13 +37,16 @@ public class ItmnEventoController {
 
     //Filtrar evento por data
     @PostMapping("/data")
-    public ResponseEntity<ItmnEvento> buscarEvento(@RequestBody ItmnEvento data){
-        ItmnEvento evento = repo.findBydataEvt(data.getDataEvt());
-        if (evento!=null) {
-            return ResponseEntity.ok(evento); // OK = Codigo 200 (HTTP de sucesso)
-        }
-        
-        return ResponseEntity.notFound().build(); // notFound = Codigo 404 (Não encontrado)
+    public ResponseEntity<List<ItmnEvento>> buscarPorData(@RequestBody ObjectNode json) {
+
+        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+        LocalDate ini = LocalDate.parse(json.get("dt1").asText(), fmt);
+        LocalDate fim = LocalDate.parse(json.get("dt2").asText(), fmt);
+
+        List<ItmnEvento> eventos = repo.findByDataevtBetween(ini, fim);
+
+        return ResponseEntity.ok(eventos);
     }
 
 }

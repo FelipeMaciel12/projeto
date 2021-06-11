@@ -1,8 +1,7 @@
 package br.itau.dashboard.model;
 
 
-import java.util.Date;
-
+import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,8 +22,11 @@ public class ItmnEvento {
     @Column(name = "numSeq")
     private int numSeq;
 
-    @Column(name = "dataEvt", nullable = false)
-    private Date dataEvt= new Date();
+   // @Column(name = "dataEvt", nullable = false)
+   // private Date dataEvt= new Date();
+
+    @Column(name = "data_evt", nullable =false)
+    private LocalDate dataevt;
     
     @OneToOne // um alarme relacionado a um evento
     @JoinColumn (name = "idAlarme")
@@ -44,12 +46,12 @@ public class ItmnEvento {
         this.numSeq = numSeq;
     }
 
-    public Date getDataEvt() {
-        return dataEvt;
+    public LocalDate getDataevt() {
+        return dataevt;
     }
 
-    public void setDataEvt(Date dataEvt) {
-        this.dataEvt = dataEvt;
+    public void setDataevt(LocalDate dataevt) {
+        this.dataevt = dataevt;
     }
 
     public ItmnAlarme getAlarme() {
@@ -68,6 +70,7 @@ public class ItmnEvento {
         this.equipamento = equipamento;
     }
 
+    
     
 
 }

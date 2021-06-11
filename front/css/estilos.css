@@ -1,5 +1,11 @@
    /* "CSS" Criando um padrao de estilos para os comandos nativos do HTML*/
 
+   body,
+   html {
+     height: 100%;
+   }
+   
+
    P{
     font-size: 14px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -13,18 +19,15 @@ h1{
     color: black;
 }
 
-body{
-    
-    background-color: white;
-
-}
-
 form{
-    background-color: white;
+    width: 250px;
     font-size: 12px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    padding: 15px;
     
 }
+
 
 fieldset{
     width: 250px;
@@ -59,11 +62,8 @@ legend{
 
 
 .campo_nome{
-    font-size: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 240px;
-    color: darkred;
-    background-color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;       
+    text-align: center;
 }
 
 .campo_email{
@@ -84,11 +84,11 @@ legend{
 
 /*Criando estilos para a nossa pagina bootstrap*/
 
-.container{
-    border: 3px solid black;
-}
+/*.container{
+    background-color: white;
+}*/
 
-.div1{
+/*.div1{
     background-color: rgb(5, 5, 95);
     color: white;
     font-size: 15px;
@@ -113,4 +113,82 @@ legend{
 
 .cabecalho{
     background-color: gray;
+} */
+
+.jumbotron{
+    background-color:white;
+    margin-bottom: 0px;
+    
+}
+
+.form-control{
+    margin-bottom: 15px;
+
+}
+
+.titulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    color: #FF9900;
+}
+
+.tituloRel{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    color: #FF9900;
+}
+
+.tituloRel2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: small;
+    color: #FF9900;
+}
+
+#background {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-image: url("/imagens/programa-itau-capa.png");
+    background-color: rgba(255, 255, 255, 0.1);
+    background-blend-mode: lighten;
+  }
+
+  #botoes{
+    margin: 15px 10px 15px 10px;
+
+  }
+
+  #cabecalho{
+    background-color: #FF9900;
+    min-height: 100px;
+}
+
+#dadosUser{
+    font-size: medium;
+    margin-left: 0px;
+}
+
+#imgUser{
+    max-width: 120px;
+    padding-right: 0px;
+}
+
+img{
+    width:80px;
+    height:80px;
+}
+
+#msgError{
+    margin: 15px 10px 15px 10px;
+    font-size: small;
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+  
+.campoData{
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 240px;
+    color: #FF9900;
 }

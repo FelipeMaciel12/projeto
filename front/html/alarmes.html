@@ -33,56 +33,49 @@
 
 </head>
 
-<body onload="validaLogin()">
+<body onload="validaLogin(1)">
+    <div id="background">
+        <!-- Inserindo um menu do tipo navbar
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><img src="../imagens/logo_itau.png" width="60" height="40"> </a>
+            <a class="navbar-brand" href="#">EventDash </a>
+        </nav>-->
 
-    <!-- Inserindo um menu do tipo navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="../imagens/logo_itau.png" width="60" height="40"> </a>
-        <a class="navbar-brand" href="#">EventDash </a>
-    </nav>
+        <!--Criando o container lg da nossa caixa-->
+        <div class="container d-flex h-100">
+            <!--criando uma linha dentro do container-->
+            <div class="row align-items-center w-100">
+                <!--inserindo coluna dentro da linha no container-->
+                <div class="col-7 mx-auto">
+                    <div class="jumbotron">
 
-    <!--Criando o container lg da nossa caixa-->
-    <div class="container">
-        <!--criando uma linha dentro do container-->
-        <div class="row">
-            <!--inserindo coluna dentro da linha no container-->
-            <div class="col-lg-2 col-md-2 col-sm-2 div1"></div>
-            <div class="col-lg-8 col-md-8 col-sm-8">
+                        <div class="row w-100" id="cabecalho">
+                            <div class="col align-self-center" id="imgUser"> <img src="../imagens/felipe.jpg">
+                            </div>
+                            <div class="col align-self-center" id="dadosUser"></div>
+                            <div class="col-4 align-self-center">
+                                <div class="row ">
+                                    <div class="col">
+                                        <button class="btn btn-sm btn-secondary" onclick="paginaRel()"><i
+                                                class="fa fa-sign-out"></i> Voltar</button>
+                                    </div>
+                                    <div class="col">
+                                        <button class="btn btn-sm btn-secondary" onclick="logout()"><i
+                                                class="fa fa-sign-out"></i>
+                                            Logout</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row w-100" style="height: 20px; margin-top: 20px"></div>
 
-                <table border="0" width=100% class="menu">
+                        <div id="tabela"></div>
 
-                    <!--inserindo uma linha na tabela com a tag <tr>-->
-                    <tr>
-                        <!--inserindo colunas dentra da linha da tabela <td>-->
-                        <td align="left"> <img src="../imagens/felipe.jpg" width="80" height="80">
-                            <div id="dadosUser"></div>
-                        </td>
-                        <td align="right"><button onclick="paginaRel()"> Voltar </button></td>
-                        <td align="right"><button onclick="logout()"> Logout </button></td>
-                    </tr>
+                    </div>
 
-                </table>
-                <br><br>
-                <fieldset>
-                    <!--Inserindo uma legenda na pagina-->
+                </div>
 
-                    <legend>Alarmes Monitorados</legend>
-                    <br><br>
-                    <br><br>
-                    <br><br>
-                    <br><br>
-                    <br><br>
-                    <br><br>
-                    <br><br>
-                    <br><br>
-                    <br><br>
-                    <!-- <div id="tabela"></div>-->
-                    <div id="alarme"></div>                  
-                    <br><br>
-                    </td>
-                </fieldset>
             </div>
-            <div class="col-lg-2 col-md-2 col-sm-2 div1"></div>
         </div>
     </div>
 </body>

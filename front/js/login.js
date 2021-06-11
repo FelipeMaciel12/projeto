@@ -1,5 +1,6 @@
 
-function login() {
+function login(event) {
+    event.preventDefault()
     let user = document.getElementById("txtUser").value
     let password = document.getElementById("txtPassword").value
 
